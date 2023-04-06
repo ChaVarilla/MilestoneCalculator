@@ -93,21 +93,36 @@ public class MainFrame extends JFrame {
 
 
         //Add panel to frame
-        add(panel);
+        add(panel); 
+               
+        
         
         setVisible(true);
         
         
-        
-        // Add an ActionListener to the button
         calculateButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Instantiate Student class
                 Student stud = new Student();
+                
                
                 // Assign textfield values to stud object
                 stud.setStudentName(tf1.getText());
                 stud.setStudentNumber(tf2.getText());
+                
+                float numtf3 =  Float.parseFloat(tf3.getText());
+                float numtf4 =  Float.parseFloat(tf4.getText());
+                float numtf5 =  Float.parseFloat(tf5.getText());
+                
+                if(numtf3<0 | numtf3>100| numtf4<0 | numtf4>100 | numtf5<0 | numtf5>100){
+                    JOptionPane.showMessageDialog(null, "Enter values ranging 0-100", 
+                            "Entry Error", JOptionPane.ERROR_MESSAGE);                 
+                    MainFrame frame = new MainFrame();
+                    dispose();
+                }
+                
+                else{
+                
                 stud.setm1(Float.parseFloat(tf3.getText()));
                 stud.setm2(Float.parseFloat(tf4.getText()));
                 stud.setm3(Float.parseFloat(tf5.getText()));
@@ -116,8 +131,9 @@ public class MainFrame extends JFrame {
                 MilestoneOutput output = new MilestoneOutput(stud);
                 output.setVisible(true);
                 dispose();
+                }
             }
         });
-        
     }
+    
 }

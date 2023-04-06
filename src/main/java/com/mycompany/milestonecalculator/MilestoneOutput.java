@@ -55,7 +55,6 @@ public class MilestoneOutput extends JFrame {
         // Create Quiz 2 textfield
         tf4 = new JTextField(10);
         tf4.setEnabled(false);
-        
         tf4.setText(stud.getm2());
        
         // Create Quiz 3 textfield
@@ -138,6 +137,6 @@ public class MilestoneOutput extends JFrame {
                 dispose();
             }
         });
-    
+   
     }
 }

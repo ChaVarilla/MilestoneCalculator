@@ -53,20 +53,23 @@ public class Student {
     }
    
     public void setm1(float ms1) {
+        ms1 = (float) (ms1*0.25);
         m1 = ms1;
     }
    
     public void setm2(float ms2) {
+        ms2 = (float) (ms2*0.4);
         m2 = ms2;
     }
    
     public void setm3(float ms3) {
+        ms3 = (float) (ms3*0.35);
         m3 = ms3;
     }
    
     //methods
     public float computeAverage() {
-        averageGrade = (m1*25+ m2*40 + m3*35) / 100;
+        averageGrade = m1+ m2 + m3;
         return averageGrade;
     }
 }
