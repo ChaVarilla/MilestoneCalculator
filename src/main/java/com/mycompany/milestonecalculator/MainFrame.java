@@ -117,8 +117,11 @@ public class MainFrame extends JFrame {
                 if(numtf3<0 | numtf3>100| numtf4<0 | numtf4>100 | numtf5<0 | numtf5>100){
                     JOptionPane.showMessageDialog(null, "Enter values ranging 0-100", 
                             "Entry Error", JOptionPane.ERROR_MESSAGE);                 
-                    MainFrame frame = new MainFrame();
-                    dispose();
+                    tf1.setText("");
+                    tf2.setText("");
+                    tf3.setText("");
+                    tf4.setText("");
+                    tf5.setText("");
                 }
                 
                 else{
